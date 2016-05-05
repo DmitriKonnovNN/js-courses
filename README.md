@@ -40,3 +40,13 @@ function getLength(obj) { ... }
 // вычислить день недели в указанную дату
 function getDayOfWeek(year, month, day) { ... }
 ```
+
+## Тест 3. Область видимость, замыкания
+
+```js
+// получить функцию, которая считает, сколько раз она вызывается
+function getCounter() { ... }
+
+// multiplex(4)(5) --> 20
+function multiplex() { ... }
+```
