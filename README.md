@@ -45,8 +45,18 @@ function getDayOfWeek(year, month, day) { ... }
 
 ```js
 // получить функцию, которая считает, сколько раз она вызывается
+// var counter = getCounter()
+// counter() - вернёт 1
+// counter() - вернёт 2
 function getCounter() { ... }
 
 // multiplex(4)(5) --> 20
 function multiplex() { ... }
+
+// получить функцию, которая умеет здороваться и прощаться с определённым человеком
+// hello = getHellower("Вася")
+// hello() - вернёт "Привет, Вася"
+// hello() - вернёт "Уже здоровались"
+// hello() - вернёт "Пока, Вася"
+function getHellower() { ... }
 ```

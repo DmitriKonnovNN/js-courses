@@ -19,6 +19,25 @@ describe("getCounter", function() {
 
   });
 
+  describe("счётчики независимы", function() {
+
+    it("первый был вызван 10 раз, а второй 9 раз", function() {
+      var counter1 = getCounter();
+      for (var i = 0; i < 9; i++) {
+        counter1();
+      }
+
+      var counter2 = getCounter();
+      for (var i = 0; i < 8; i++) {
+        counter2();
+      }
+
+      assert.equal(counter1(), 10);
+      assert.equal(counter2(), 9);
+    });
+
+  });
+
 });
 
 describe("multiplex", function() {
