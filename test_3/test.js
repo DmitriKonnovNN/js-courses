@@ -49,7 +49,7 @@ describe("multiplex", function() {
     });
 
     it("multiplex(10)(9) --> 90", function() {
-      assert.equal(multiplex(10)(9), 0);
+      assert.equal(multiplex(10)(9), 90);
     });
 
     it("multiplex(7)(-3) --> -21", function() {
@@ -58,6 +58,43 @@ describe("multiplex", function() {
 
     it("multiplex(1)(2) --> 2", function() {
       assert.equal(multiplex(1)(2), 2);
+    });
+
+  });
+
+});
+
+describe("getHellower", function() {
+
+  describe("здоровается с Петей", function() {
+
+    it("здоровается с Петей", function() {
+      var hellower = getHellower("Петя");
+      assert.equal(hellower.hello(), "Привет, Петя");
+      assert.equal(hellower.hello(), "Уже здоровались");
+      assert.equal(hellower.hello(), "Пока, Петя");
+    });
+
+    it("здоровается с Сашей", function() {
+      var hellower = getHellower("Саша");
+      assert.equal(hellower.hello(), "Привет, Саша");
+      assert.equal(hellower.hello(), "Уже здоровались");
+      assert.equal(hellower.hello(), "Пока, Саша");
+    });
+
+    it("здоровается с Сашей и Петей независимо", function() {
+      var hellower1 = getHellower("Саша");
+      var hellower2 = getHellower("Петя");
+
+      assert.equal(hellower1.hello(), "Привет, Саша");
+      assert.equal(hellower2.hello(), "Привет, Петя");
+
+      assert.equal(hellower1.hello(), "Уже здоровались");
+      assert.equal(hellower2.hello(), "Уже здоровались");
+
+      assert.equal(hellower1.hello(), "Пока, Саша");
+      assert.equal(hellower2.hello(), "Пока, Петя");
+
     });
 
   });
