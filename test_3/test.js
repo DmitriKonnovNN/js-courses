@@ -70,30 +70,30 @@ describe("getHellower", function() {
 
     it("здоровается с Петей", function() {
       var hellower = getHellower("Петя");
-      assert.equal(hellower.hello(), "Привет, Петя");
-      assert.equal(hellower.hello(), "Уже здоровались");
-      assert.equal(hellower.hello(), "Пока, Петя");
+      assert.equal(hellower(), "Привет, Петя");
+      assert.equal(hellower(), "Уже здоровались");
+      assert.equal(hellower(), "Пока, Петя");
     });
 
     it("здоровается с Сашей", function() {
       var hellower = getHellower("Саша");
-      assert.equal(hellower.hello(), "Привет, Саша");
-      assert.equal(hellower.hello(), "Уже здоровались");
-      assert.equal(hellower.hello(), "Пока, Саша");
+      assert.equal(hellower(), "Привет, Саша");
+      assert.equal(hellower(), "Уже здоровались");
+      assert.equal(hellower(), "Пока, Саша");
     });
 
     it("здоровается с Сашей и Петей независимо", function() {
       var hellower1 = getHellower("Саша");
       var hellower2 = getHellower("Петя");
 
-      assert.equal(hellower1.hello(), "Привет, Саша");
-      assert.equal(hellower2.hello(), "Привет, Петя");
+      assert.equal(hellower1(), "Привет, Саша");
+      assert.equal(hellower2(), "Привет, Петя");
 
-      assert.equal(hellower1.hello(), "Уже здоровались");
-      assert.equal(hellower2.hello(), "Уже здоровались");
+      assert.equal(hellower1(), "Уже здоровались");
+      assert.equal(hellower2(), "Уже здоровались");
 
-      assert.equal(hellower1.hello(), "Пока, Саша");
-      assert.equal(hellower2.hello(), "Пока, Петя");
+      assert.equal(hellower1(), "Пока, Саша");
+      assert.equal(hellower2(), "Пока, Петя");
 
     });
 
