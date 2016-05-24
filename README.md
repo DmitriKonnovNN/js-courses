@@ -60,3 +60,21 @@ function multiplex() { ... }
 // hello() - вернёт "Пока, Вася"
 function getHellower() { ... }
 ```
+
+## Задание 4
+
+Написать калькулятор на JS
+
+Примеры:
+https://jsfiddle.net/katyka/tao0jwb4/1/
+
+
+## Задание 5
+
+Написать игру на JS + Canvas
+
+Примеры:
+https://jsfiddle.net/bg1zr001/
+
+## Задание 6
+
