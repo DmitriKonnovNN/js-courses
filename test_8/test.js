@@ -136,11 +136,15 @@ describe("getApple", function() {
 
     it("говорит цвет", function() {
       var apple = getApple('красный', 'маленький');
+      assert.isDefined(apple, "яблоко существует");
+
       assert.equal(apple.sayColor(), 'мой цвет - красный');
     });
 
     it("говорит размер", function() {
       var apple = getApple('красный', 'маленький');
+      assert.isDefined(apple, "яблоко существует");
+
       assert.equal(apple.saySize(), 'мой размер - маленький');
     });
 
@@ -148,7 +152,10 @@ describe("getApple", function() {
 
   describe("яблоки независимы", function() {
     var apple = getApple('красный', 'маленький');
+    assert.isDefined(apple, "яблоко существует");
+
     var appleBig = getApple('красный', 'большой');
+    assert.isDefined(appleBig, "яблоко существует");
 
     assert.equal(apple.saySize(), 'мой размер - маленький');
     assert.equal(appleBig.saySize(), 'мой размер - большой');
