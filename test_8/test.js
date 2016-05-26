@@ -52,10 +52,6 @@ describe("getReverseByWords", function() {
 
 describe("getAverageMany", function() {
 
-  it("при запуске без параметров результат NaN", function() {
-    assert(isNaN(getAverageMany()), "getAverageMany() не NaN");
-  });
-
   describe("вычисляет среднее", function() {
 
     it("среднее 2, 2, 2, 2, 2 равно 2", function() {
@@ -99,11 +95,11 @@ describe("getFilterRange", function() {
   describe("фильтрует массив", function() {
 
     it("[0, 1, 2, 3, 4, 5] между 2 и 4 -> [3]", function() {
-      assert.equal(getFilterRange([0, 1, 2, 3, 4, 5], 2, 4), [3]);
+      assert.deepEqual(getFilterRange([0, 1, 2, 3, 4, 5], 2, 4), [3]);
     });
 
     it("[0, 1, 2, 3, 4, 5] между -10 и 3 -> [0, 1, 2]", function() {
-      assert.equal(getFilterRange([0, 1, 2, 3, 4, 5], -10, 3), [0, 1, 2]);
+      assert.deepEqual(getFilterRange([0, 1, 2, 3, 4, 5], -10, 3), [0, 1, 2]);
     });
 
   });
