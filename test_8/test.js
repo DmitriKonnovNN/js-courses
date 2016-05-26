@@ -1,0 +1,3 @@
+describe("getAverageMany", function() {
+
+});

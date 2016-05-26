@@ -104,7 +104,7 @@ function getReverseByWords(s) { ... }
 Написать реализацию функции
 ```js
 // получить среднее арифметическое значение всех аргументов функции
-function getAverage(a, b, c...) { ... }
+function getAverageMany(a, b, c...) { ... }
 ```
 
 4.
@@ -124,8 +124,12 @@ function isEmpty(obj) { ... }
 6.
 Написать реализацию функции
 ```js
-// вернуть из массива arr новый массив состоящий только из чисел лежащих между a и b
-function getFilterRange(arr, a, b) { ... }
+// вернуть объект, у которого есть методы sayColor и saySize
+// Пример:
+// var apple = getApple('красный', 'большое');
+// apple.sayColor() -> 'мой цвет - красный'
+// apple.saySize() -> 'мой размер - большое'
+function getApple(color, size) { ... }
 ```
 
 7.
